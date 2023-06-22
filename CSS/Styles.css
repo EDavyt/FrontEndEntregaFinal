@@ -1,0 +1,514 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro";
+}
+
+/* Variables */
+:root {
+  --DeskPrimaryColor: #8b48bf;
+  --ClearPurple: #8b48bf4d;
+  --MobilePrimaryColor: #3cddf3;
+  --DarkestBlue: #232851;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px 0 25px 0;
+}
+
+.menu {
+  display: none;
+}
+.ContactMenu {
+  display: none;
+  text-decoration: none;
+}
+
+#MenuHeader {
+  width: 45px;
+  height: 45px;
+}
+
+/* Main section - Carrousel */
+
+.Carrousel {
+  display: flex;
+  flex-direction: column;
+  /* height: 1vh; Cuando acrivo esto pasancosas raras, el elemento .info ocupa el espacio de el carrousel y el header pierde el comportamiento flex */
+}
+.Carrousel * {
+  margin-bottom: 28px;
+}
+.CarrouselIMG {
+  margin: auto;
+  margin: 40px 40px 75px 40px;
+}
+.CarrouselText {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: end;
+  margin-right: 30px;
+  padding-left: 50px;
+}
+.CarrouselText h2 {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--DarkestBlue);
+  margin: 0 0 28px 50px;
+}
+
+.Contact {
+  background-color: var(--DeskPrimaryColor);
+  color: #ffffff;
+  padding: 12.5px 40px;
+  border-radius: 9999px;
+  text-decoration: none;
+}
+
+/* Info Styles */
+.Info {
+  background-color: var(--MobilePrimaryColor);
+  justify-content: space-around;
+  color: white;
+}
+.Info > * {
+  padding: 30px 20px;
+}
+
+.Info h3 {
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.Info p {
+  font-size: 16px;
+}
+
+/* Bullet points styles */
+
+.SectionPoints {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin: 65px 0 65px 34px;
+}
+
+.PointBox * {
+  margin: 0 0 40px 0;
+}
+.PointBox h4 {
+  background-color: var(--ClearPurple);
+  padding: 10px 0 10px 90px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.PointBox span {
+  content: "01";
+  background-color: var(--DeskPrimaryColor);
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 9999px;
+  display: inline;
+  position: relative;
+  top: 30px;
+  left: -15px;
+}
+
+.PointBox p {
+  color: #b3b2b7;
+}
+
+/* Best of the month */
+
+.BestOfMonth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.BestOfMonth h3 {
+  color: var(--DarkestBlue);
+  font-size: clamp(6vw, 8vh, 1rem);
+  font-weight: 500;
+  margin-bottom: 55px;
+}
+
+.BoMCard {
+  background-color: #fafafafa;
+  margin: 70px 0 0 0;
+}
+
+.BoMCard img {
+  position: relative;
+  top: -30px;
+}
+.BoMCard h5 {
+  color: #3f4868;
+  margin-bottom: 18px;
+}
+.BoMCard p {
+  margin-bottom: 21px;
+  padding: 31px;
+  color: #b3b2b7;
+}
+/* Viwe more button */
+.MoreForDesktop {
+  display: none;
+}
+.Mobile {
+  display: none;
+}
+
+.BoMViewMore {
+  display: none;
+}
+
+#ch:checked ~ .Mobile {
+  display: block;
+}
+#ch:checked ~ .ShowMore {
+  display: none;
+}
+#ch:not(:checked) ~ .ShowLess {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  background-color: var(--DeskPrimaryColor);
+  padding: 12.5px 40px;
+  width: fit-content;
+  cursor: pointer;
+  border-radius: 9999px;
+  color: #ffffff;
+  margin: 45px 0 50px 0;
+}
+
+/* End of button logic */
+
+/* Prefooter */
+.Prefooter {
+  background-color: var(--MobilePrimaryColor);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+  align-items: center;
+}
+.Prefooter h3 {
+  font-weight: 500;
+  font-size: 40px;
+  padding: 40px;
+  margin: 0 80px 0 80px;
+}
+
+.Prefooter a {
+  background-color: #232c50;
+  color: #fafafafa;
+  padding: 12.5px 40px;
+  border-radius: 9999px;
+  width: fit-content;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+
+.FooterContainer {
+  background-color: #1e1e26;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.NewsLetter {
+  display: flex;
+  padding: 65px 50px 65px 50px;
+  width: 100%;
+}
+
+.NewsLetter input {
+  background-color: #ffffff;
+  width: 300px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 9999px;
+  display: inline;
+}
+.NewsLetter #Go {
+  height: fit-content;
+  margin: 0px 0 0 5px;
+}
+
+.FooterIcons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  order: 1;
+  margin-top: 50px;
+}
+/* Rearange items for the mobile version (the HTML is Desktop first) */
+.LastColumn {
+  order: 1;
+  width: 100%;
+}
+
+.MiddleColumn {
+  order: 2;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: start;
+  justify-content: space-around;
+}
+.MiddleColumn ul {
+  list-style: none;
+}
+.MiddleColumn ul li {
+  padding: 6px;
+}
+
+.FirstColumn {
+  order: 3;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerLogo {
+  order: 2;
+  margin-top: 50px;
+}
+
+.Copyrigth {
+  order: 4;
+  margin: 50px 130px 50px 130px;
+  font-size: 12px;
+  color: #8c8c94;
+}
+.CopyFootDesk {
+  display: none;
+}
+
+/* Making Desktop Rules For Desktop */
+@media only screen and (min-width: 1440px) {
+  /* Header */
+  .header {
+    padding: 65px 40px;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu li {
+    margin: 0 14px;
+    cursor: pointer;
+    list-style-type: none;
+  }
+  .ContactMenu {
+    display: inline-block;
+    background-color: var(--DeskPrimaryColor);
+    padding: 12.5px 40px;
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 9999px;
+    color: #ffffff;
+    margin: 45px 0 50px 0;
+    text-decoration: none;
+  }
+  #MenuHeader {
+    display: none;
+  }
+  /* Main section - Carrousel  For Desktop*/
+
+  .Carrousel {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 150px 0 150px;
+  }
+  .CarrouselText {
+    width: 490px;
+  }
+
+  /* Info Styles For Desktop*/
+  .Info {
+    background-color: var(--DeskPrimaryColor);
+    display: grid;
+    grid-template-columns: 720px 720px;
+  }
+  .Info h3 br {
+    display: none;
+  }
+  .Info h3 {
+    margin: 0 0 0 175px;
+    padding: 30px;
+    width: 540px;
+  }
+  .Info p {
+    margin: 0 30px 0 175px;
+  }
+
+  /* Bullet Points Desktop */
+  .SectionPoints {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fafafafa;
+    margin: 0px 0px 60px 0px;
+    padding: 0 90px;
+  }
+  .PointBox {
+    width: 425px;
+    margin: 0 25px 25px 50px;
+  }
+  .PointBox h4 {
+    background-color: white;
+    padding: 10px 0 0 0;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: #fafafafa;
+  }
+  .PointBox span {
+    position: relative;
+    left: -100px;
+    padding: 10px 25px;
+  }
+  .PointBox * {
+    margin: 0 0 30px 0;
+  }
+
+  /* Best Of the Month desktop */
+  .BestOfMonth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 130px;
+  }
+  .BoMCardContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .BestOfMonth h3 {
+    width: 600px;
+    height: 61px;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .BoMCard {
+    width: 450px;
+  }
+  .BoMCard p {
+    line-height: 40px;
+  }
+  /* Visibiliry of cards on Desktop */
+  .Mobile {
+    display: block;
+  }
+  #ch:checked ~ .ShowMore {
+    display: none;
+  }
+  #ch:not(:checked) ~ .ShowLess {
+    display: none;
+  }
+  Label.ShowLess {
+    display: none;
+  }
+  .ShowMore {
+    display: none;
+  }
+  .MoreForDesktop {
+    display: block;
+  }
+
+  /* End of bvisibility of cards on Desktop */
+
+  /* Prefooter */
+  .Prefooter {
+    background-color: var(--DeskPrimaryColor);
+    display: grid;
+    grid-template-columns: 720px 720px;
+    position: relative;
+  }
+  .Prefooter a {
+    position: relative;
+    top: 15%;
+    left: 35%;
+    background-color: #ffffff;
+    color: var(--DeskPrimaryColor);
+  }
+
+  /* Footer  on Dektop*/
+  .FooterContainer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 100px 50px 100px;
+    align-items: start;
+    position: relative;
+  }
+  .LastColumn {
+    order: 4;
+  }
+  .MiddleColumn {
+    order: 3;
+    justify-content: space-between;
+  }
+  .FirstColumn {
+    order: 1;
+    align-items: start;
+    flex-direction: column;
+    position: relative;
+    top: -50px;
+  }
+  .FooterIcons {
+    padding: 0px;
+    justify-content: start;
+    padding: 0 0 0 10px;
+  }
+  .FooterIcons img {
+    margin-right: 10px;
+  }
+  .footerLogo {
+    order: 1;
+    padding: 0px;
+  }
+  .Copyrigth {
+    display: none;
+  }
+  .CopyFootDesk {
+    background-color: #1e1e26;
+    display: flex;
+    justify-content: end;
+    position: relative;
+  }
+  .CopyrigthDesk {
+    margin: 0px 60px 0px 130px;
+    font-size: 12px;
+    color: #8c8c94;
+    background-color: #1e1e26;
+    position: relative;
+    top: -30px;
+  }
+  .NewsLetter {
+    padding: 0 0 0 120px;
+  }
+}
